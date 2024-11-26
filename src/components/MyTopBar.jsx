@@ -1,6 +1,6 @@
 import Nav from "react-bootstrap/Nav";
 import viteLogo from "/vite.svg";
-import { NavDropdown } from "react-bootstrap";
+import { Button, NavDropdown } from "react-bootstrap";
 
 const TopBar = () => {
   return (
@@ -30,6 +30,12 @@ const TopBar = () => {
         <NavDropdown.Item eventKey="4.4">Romance</NavDropdown.Item>
         <NavDropdown.Item eventKey="4.4">Scifi</NavDropdown.Item>
       </NavDropdown>
+
+      <Nav.Item className="ms-auto me-4">
+        <Button className="bg-dark border border-2 ">
+          <i className="bi bi-cart4 text-white "></i>
+        </Button>
+      </Nav.Item>
     </Nav>
   );
 };
