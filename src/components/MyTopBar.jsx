@@ -1,11 +1,12 @@
 import Nav from "react-bootstrap/Nav";
 import viteLogo from "/vite.svg";
+import { NavDropdown } from "react-bootstrap";
 
 const TopBar = () => {
   return (
-    <Nav className="align-items-center bg-dark">
+    <Nav className="align-items-center bg-dark sticky-top">
       <Nav.Item>
-        <Nav.Link href="#" className="align-items-center">
+        <Nav.Link href="#" className="align-items-center ">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </Nav.Link>
       </Nav.Item>
@@ -21,6 +22,14 @@ const TopBar = () => {
       <Nav.Item>
         <Nav.Link href="#">Browse</Nav.Link>
       </Nav.Item>
+
+      <NavDropdown title="Categories" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1">Fantasy</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2">History</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Horror</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.4">Romance</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.4">Scifi</NavDropdown.Item>
+      </NavDropdown>
     </Nav>
   );
 };
